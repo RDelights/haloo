@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Content over Background Video</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* 100% of the viewport height */
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay-content {
+            text-align: center;
+            color: white;
+            opacity: 0; /* Set initial opacity to 0 */
+            transition: opacity 1s ease-in-out; /* Add a transition for opacity */
+        
+        }
+
+        .overlay-content.show {
+            opacity: 1; /* When the 'show' class is added, opacity is set to 1 */
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop>
+        <source src="Friendship _ Stop Motion Animation.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div id="message" class="overlay-content">
+        <!-- Placeholder for the dynamic content -->
+    </div>
+
+    <script>
+        var words = ['enooddd', 'elarkummm', 'deshymanooo', 'i ammm soryyyy  I STILL VALUE YOUR FRINDSHIP..........ANAKHA,AMITHA,ROSE,FIDHA,AYONA'   
+  
+];
+        
+        var messageDiv = document.getElementById('message');
+        var currentWordIndex = 0;
+
+        function showNextWord() {
+            if (currentWordIndex < words.length) {
+                messageDiv.innerHTML += words[currentWordIndex] + ' ';
+                currentWordIndex++;
+                setTimeout(showNextWord, 1000); // Delay between words (adjust as needed)
+            } else {
+                messageDiv.classList.add('show'); // Add the 'show' class to trigger the transition
+            }
+        }
+
+        // Call the showNextWord function after a delay (e.g., 2 seconds)
+        setTimeout(showNextWord, 12000);
+    </script>
+
+    <!-- Your other content goes here -->
+
+</body>
+</html>

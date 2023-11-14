@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Content over Background Video</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay-content {
+          
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            color: white;
+            opacity: 0;
+            animation: slideIn 2s ease-in-out forwards;
+         
+        }
+
+        @keyframes slideIn {
+            from {
+                left: -100%;
+                opacity: 0;
+            }
+            to {
+                left: 0;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop>
+        <source src="Friendship _ Stop Motion Animation.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="overlay-content">
+        <h1>halooooo</h1>
+        <p>elarkumm enodd deshyamnoo.....</p>
+        <p></p>
+        <p>🅸 🆂🆃🅸🅻🅻 🆅🅰🅻🆄🅴 🆈🅾🆄🆁 🅵🆁🅸🅴🅽🅳🆂🅷🅸🅿......</p>
+        <P>ANAKHA</P>
+        <P>AMITHA</P>
+        <P>ROSE</P>
+        <P>FIDHA</P>
+        <P>AYONA</P>
+    </div>
+
+    <!-- Your other content goes here -->
+
+</body>
+</html>
