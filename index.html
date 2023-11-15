@@ -1,47 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-    <title>RANJIT SHINE</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Content over Background Video</title>
+    <style>
+        body {
+            margin: 0; 
+            overflow: hidden;
+            position: relative;
+        }
 
-    <head>
-        
-        <link rel="stylesheet" type="text/css"  href="index.css">
-    </head>
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
+        .overlay-content {
+          
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            color: white;
+            opacity: 0;
+            animation: slideIn 2s ease-in-out forwards;
+         
+        }
 
-                <body>
-                    
-       <div class="banner">
-                                    
-                     <video autoplay muted loop>
-      <source src="Mountain And Clouds Free Background Video, Stock Footage,No Copyright, Video Backgrounds, Animations.mp4" type="video/mp4"> 
-                                        </video>
-                                    
-                                        
+        @keyframes slideIn {
+            from {
+                left: -100%;
+                opacity: 0;
+            }
+            to {
+                left: 0;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <video autoplay loop>
+        <source src="Friendship _ Stop Motion Animation.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
-                                    <div class="content">
+    <div class="overlay-content">
+        <h1>halooooo</h1>
+        <p>elarkumm enodd deshyamnoo.....</p>
+        <p></p>
+        <p>🅸 🆂🆃🅸🅻🅻 🆅🅰🅻🆄🅴 🆈🅾🆄🆁 🅵🆁🅸🅴🅽🅳🆂🅷🅸🅿......</p>
+        <P>ANAKHA</P>
+        <P>AMITHA</P>
+        <P>ROSE</P>
+        <P>FIDHA</P>
+        <P>AYONA</P>
+    </div>
 
+    <!-- Your other content goes here -->
 
-
-                                            
-
-
-                                        <center><div class="nav">
-                                            <a class="active" href="#home"><strong>Home</strong></a><br><br>
-                                            <a href="news">News</a><br><br>
-                                            <a href="file:///C:/college/Coding/html/project/registration.html">Contact</a><br><br>
-                                            <a href="https://www.instagram.com/ranjit_shine/?next=%2F" >About</a><br><BR><BR>
-                                            <a href="file:///C:/college/Coding/html/project/registration.html" target="_blank">REGISTRATION</a><br>
-                                          </div></center>
-                                          <br>
-                                          <br>
-                                          <br>
-                                        <h1><strong>𝓡𝓐𝓝𝓙𝓘𝓣  𝓢𝓗𝓘𝓝𝓔</strong></h1>
-                                        <p> “𝕻𝖊𝖔𝖕𝖑𝖊'𝖘 𝖕𝖆𝖘𝖘𝖎𝖔𝖓 𝖆𝖓𝖉 𝖉𝖊𝖘𝖎𝖗𝖊 𝖋𝖔𝖗 𝖆𝖚𝖙𝖍𝖊𝖓𝖙𝖎𝖈𝖎𝖙𝖞 𝖎𝖘 𝖘𝖙𝖗𝖔𝖓𝖌.”</p>
-                                        
-                                    </div>
-                                </div>
-                           
-                </body>
-                <body1> <H1><STRONG> </STRONG></H1></body1>
-  
+</body>
 </html>
